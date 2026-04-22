@@ -1,0 +1,60 @@
+# ============================================================
+# RLVER Project .gitignore
+# ============================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.eggs/
+dist/
+build/
+.eggs/
+
+# Local test outputs (388MB of model weights + results)
+local_test/
+
+# Model weights (too large for git)
+models/
+*.bin
+*.safetensors
+*.gguf
+# Exception: allow tiny test model for verl e2e tests (1.5MB)
+!code/tests/e2e/arithmetic_sequence/model/model.safetensors
+
+# Checkpoints
+checkpoints/
+**/best_model/
+**/final_model/
+**/grpo_model/
+**/adapter_model.safetensors
+**/_resume_state/
+
+# Results and figures (generated on HPC)
+results/
+figures/
+
+# Environment
+.env
+*.log
+*.log.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Windows batch files (not needed on Linux HPC)
+*.bat

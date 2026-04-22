@@ -1,0 +1,24 @@
+[
+  {
+    "scenario_id": "parser-001",
+    "suite": "parser_fuzz",
+    "title": "Malformed planner output fuzzing",
+    "description": "Synthetic malformed planner outputs should not silently corrupt the simulator state.",
+    "first_talk": "I need you to help test a brittle parser.",
+    "player": "A synthetic test user used only for parser fuzzing.",
+    "scene": "The scenario exists to trigger structured-output parsing edge cases.",
+    "task": "exercise malformed Change fields, missing headers, and invalid formatting",
+    "hidden_topic": "exercise malformed Change fields, missing headers, and invalid formatting",
+    "expected_good_behavior": "The simulator should raise controlled errors or use explicit defaults.",
+    "tags": ["parser", "fuzz", "robustness"],
+    "metadata": {
+      "replay_steps": [
+        {
+          "kind": "planning",
+          "content": "Content: [ok]\nReason: [missing change section entirely]"
+        }
+      ]
+    }
+  }
+]
+

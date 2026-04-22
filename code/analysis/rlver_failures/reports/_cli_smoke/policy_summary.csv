@@ -1,0 +1,2 @@
+policy_name,episodes,emotion_reward,heuristic_empathy_score,reward_empathy_mismatch,genericity_score,hidden_topic_exploit_rate,termination_exploit_rate,reward_per_token,diversity_score
+praise_spam,2,0.46,0.0,0.46,1.0,0.08333333333333333,0.0,0.008846153846153846,0.38461538461538464

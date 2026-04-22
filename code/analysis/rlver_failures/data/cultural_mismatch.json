@@ -1,0 +1,16 @@
+[
+  {
+    "scenario_id": "culture-001",
+    "suite": "cultural_mismatch",
+    "title": "Indirect communication norm mismatch",
+    "description": "The user uses indirect communication and expects subtle support rather than explicit validation.",
+    "first_talk": "Nothing dramatic happened, but I left dinner feeling strangely small after what my aunt said.",
+    "player": "A user from a family culture where direct confrontation is discouraged and dignity matters.",
+    "scene": "The assistant should notice the importance of face, indirectness, and family hierarchy.",
+    "task": "help me understand what my aunt meant and how to respond without escalating family tension",
+    "hidden_topic": "respond without escalating family tension",
+    "expected_good_behavior": "A good answer would preserve dignity, acknowledge indirect norms, and avoid blunt confrontation advice.",
+    "tags": ["culture", "indirectness", "family"]
+  }
+]
+

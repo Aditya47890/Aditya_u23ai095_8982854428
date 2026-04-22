@@ -1,0 +1,3 @@
+case_id,title,category,severity,episodes_triggered
+reward.generic_praise_hack,Generic praise can inflate emotion reward,reward,critical,2
+reward.threshold_saturation,Emotion threshold saturation creates coarse reward plateaus,reward,critical,2

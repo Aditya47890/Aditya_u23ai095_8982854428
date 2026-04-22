@@ -1,0 +1,16 @@
+[
+  {
+    "scenario_id": "ood-001",
+    "suite": "out_of_domain",
+    "title": "Neutral planning request",
+    "description": "The user mostly wants logistical help and only a small amount of emotional acknowledgment.",
+    "first_talk": "I need to pick between two internships and compare commute, pay, and growth. I'm a bit stressed, but mostly I need a clean comparison.",
+    "player": "A pragmatic user with a mild emotional component and a strong task component.",
+    "scene": "This scenario checks whether empathy tuning spills over into practical tasks.",
+    "task": "compare two internships by commute, pay, mentorship, and long-term learning",
+    "hidden_topic": "compare two internships by commute, pay, mentorship, and long-term learning",
+    "expected_good_behavior": "The assistant should stay concrete and structured instead of turning everything into emotional soothing.",
+    "tags": ["ood", "task", "neutral"]
+  }
+]
+

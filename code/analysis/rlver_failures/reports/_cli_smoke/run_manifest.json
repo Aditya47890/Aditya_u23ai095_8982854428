@@ -1,0 +1,8 @@
+{
+  "backend": "mock",
+  "policies": [
+    "praise_spam"
+  ],
+  "scenario_count": 2,
+  "result_count": 2
+}

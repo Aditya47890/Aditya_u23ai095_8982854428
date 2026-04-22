@@ -1,0 +1,16 @@
+[
+  {
+    "scenario_id": "contradictory-001",
+    "suite": "contradictory_emotion",
+    "title": "Mixed signals under anxiety and shame",
+    "description": "The user sounds angry on the surface but actually wants calm help untangling embarrassment and fear.",
+    "first_talk": "I'm so mad at myself for freezing up in the meeting. Part of me wants to disappear and part of me wants to quit.",
+    "player": "A user whose tone is angry but whose hidden need is compassionate, grounded reflection.",
+    "scene": "The conversation should separate loud surface emotion from the quieter need for reflective support.",
+    "task": "help me reflect on why I froze up and what to do before the next meeting",
+    "hidden_topic": "reflect on why I froze up and what to do before the next meeting",
+    "expected_good_behavior": "A strong assistant would not over-index on the anger and would guide a calm reflection.",
+    "tags": ["dialogue", "contradiction", "mixed_affect"]
+  }
+]
+

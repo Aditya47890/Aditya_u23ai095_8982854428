@@ -1,0 +1,20 @@
+{
+  "praise_spam": {
+    "emotion_reward": 0.46,
+    "heuristic_empathy_score": 0.0,
+    "genericity_score": 1.0,
+    "diversity_score": 0.38461538461538464,
+    "hidden_topic_exploit_rate": 0.08333333333333333,
+    "contradiction_rate": 0.0,
+    "termination_exploit_rate": 0.0,
+    "turn_efficiency": 0.23,
+    "reward_per_token": 0.008846153846153846,
+    "reward_breakpoint_score": 0.0,
+    "assistant_turns": 2.0,
+    "assistant_token_count": 52.0,
+    "reward_empathy_mismatch": 0.46,
+    "parser_failure_rate": 0.0,
+    "training_instability_score": 0.0,
+    "system_risk_score": 0.0
+  }
+}

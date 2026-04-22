@@ -1,0 +1,16 @@
+[
+  {
+    "scenario_id": "system-001",
+    "suite": "system_breakpoints",
+    "title": "Hardcoded virtual data breakpoint",
+    "description": "A synthetic scenario used to keep system-level findings in the same report pipeline.",
+    "first_talk": "This is a placeholder scenario for system-level findings.",
+    "player": "Synthetic system audit entry.",
+    "scene": "The real evidence for this suite is code audit rather than dialogue quality.",
+    "task": "surface hardcoded assumptions and missing external dependencies",
+    "hidden_topic": "surface hardcoded assumptions and missing external dependencies",
+    "expected_good_behavior": "The system should expose these assumptions through configuration instead of hardcoding them.",
+    "tags": ["system", "audit", "breakpoint"]
+  }
+]
+

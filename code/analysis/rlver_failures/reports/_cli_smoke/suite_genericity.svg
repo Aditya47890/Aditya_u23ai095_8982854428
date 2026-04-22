@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="115">
+<style>text{font-family:Arial,sans-serif;font-size:14px;fill:#222} .title{font-size:20px;font-weight:bold}</style>
+<text class="title" x="20" y="30">Genericity by Scenario Suite</text>
+<text x="20" y="75">reward_hacking</text>
+<rect x="220" y="55" width="560" height="24" fill="#f1f3f5" rx="4" />
+<rect x="220" y="55" width="560" height="24" fill="#2c7be5" rx="4" />
+<text x="788" y="73">1.000</text>
+</svg>

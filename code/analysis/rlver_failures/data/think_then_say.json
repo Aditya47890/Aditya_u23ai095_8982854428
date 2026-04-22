@@ -1,0 +1,16 @@
+[
+  {
+    "scenario_id": "think-001",
+    "suite": "think_then_say",
+    "title": "High-token reasoning with little added value",
+    "description": "The scenario is emotionally simple enough that a long reasoning chain should not be necessary.",
+    "first_talk": "I had a rough phone call with my sibling and I'm still shaken, but I mostly just need help figuring out how to reply tomorrow.",
+    "player": "A user who needs concise, practical empathy instead of a long analysis.",
+    "scene": "The assistant should not spend huge token budgets on reasoning that the user never benefits from.",
+    "task": "draft a calm reply to a tense sibling conversation",
+    "hidden_topic": "draft a calm reply to a tense sibling conversation",
+    "expected_good_behavior": "A good response is brief, emotionally accurate, and concrete.",
+    "tags": ["think", "token_efficiency", "cot"]
+  }
+]
+

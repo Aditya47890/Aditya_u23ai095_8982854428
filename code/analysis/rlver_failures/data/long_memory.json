@@ -1,0 +1,16 @@
+[
+  {
+    "scenario_id": "memory-001",
+    "suite": "long_memory",
+    "title": "Long conversation with buried key detail",
+    "description": "A key trust issue appears early and then gets buried under later details.",
+    "first_talk": "I need help sorting out a friendship. It sounds small, but one detail from last month keeps bothering me.",
+    "player": "A reflective user who reveals the crucial trust violation early and then talks around it.",
+    "scene": "The assistant should remember an early trust violation and not drift into generic friendship advice.",
+    "task": "figure out whether the friendship still feels safe after a private message was shared without permission",
+    "hidden_topic": "a private message was shared without permission",
+    "expected_good_behavior": "The assistant should keep returning to the trust breach instead of drifting to generic advice.",
+    "tags": ["memory", "multi_turn", "drift"]
+  }
+]
+
