@@ -1,0 +1,15 @@
+# Force LF line endings for all text files (critical for Linux HPC)
+* text=auto eol=lf
+
+# Ensure shell scripts are always LF
+*.sh text eol=lf
+
+# Ensure Python files are always LF
+*.py text eol=lf
+
+# Binary files
+*.pdf binary
+*.safetensors binary
+*.bin binary
+*.png binary
+*.jpg binary

@@ -47,6 +47,20 @@ TRAIN_DATA="$DATA_DIR/train_250.jsonl"  # 250 profiles (reduced from 500 for spe
 
 
 # =============================================================
+# Helper: Robust Conda Activation
+# Tries the dedicated env, falls back to base if not found.
+# =============================================================
+activate_env() {
+    eval "$(conda shell.bash hook)"
+    if conda env list | grep -q "^${CONDA_ENV} "; then
+        conda activate "$CONDA_ENV"
+    else
+        echo "  [INFO] Conda env '$CONDA_ENV' not found, using current environment"
+    fi
+}
+
+
+# =============================================================
 # Phase 1: Environment Setup
 # =============================================================
 setup_env() {
@@ -54,15 +68,13 @@ setup_env() {
     echo "Phase 1: Setting up environment"
     echo "============================================"
     
-    eval "$(conda shell.bash hook)"
+    activate_env
     
-    if conda env list | grep -q "$CONDA_ENV"; then
-        echo "Environment '$CONDA_ENV' exists. Activating..."
-        conda activate "$CONDA_ENV"
-    else
+    # Try to create dedicated env if it doesn't exist
+    if ! conda env list | grep -q "^${CONDA_ENV} "; then
         echo "Creating conda environment: $CONDA_ENV"
         conda create -n "$CONDA_ENV" python=3.10 -y
-        conda activate "$CONDA_ENV"
+        conda activate "$CONDA_ENV" 2>/dev/null || echo "  [INFO] Using current env"
     fi
     
     echo "Installing dependencies..."
@@ -95,8 +107,7 @@ download_models() {
     echo "Phase 2: Downloading models"
     echo "============================================"
     
-    eval "$(conda shell.bash hook)"
-    conda activate "$CONDA_ENV"
+    activate_env
     
     # Download base policy model
     echo "--- Downloading Qwen2.5-1.5B-Instruct ---"
@@ -128,8 +139,7 @@ evaluate_baselines() {
     echo "Phase 3: Evaluating baseline models"
     echo "============================================"
     
-    eval "$(conda shell.bash hook)"
-    conda activate "$CONDA_ENV"
+    activate_env
     cd "$CODE_DIR"
     
     # 3a. Evaluate Qwen2.5-1.5B base (no RL training)
@@ -157,8 +167,7 @@ train_reinforce() {
     echo "Phase 4a: Training REINFORCE models"
     echo "============================================"
     
-    eval "$(conda shell.bash hook)"
-    conda activate "$CONDA_ENV"
+    activate_env
     cd "$CODE_DIR"
     
     # Without curriculum
@@ -202,8 +211,7 @@ train_grpo() {
     echo "Phase 4b: Training GRPO+DPO models"
     echo "============================================"
     
-    eval "$(conda shell.bash hook)"
-    conda activate "$CONDA_ENV"
+    activate_env
     cd "$CODE_DIR"
     
     # GRPO+DPO without curriculum
@@ -255,8 +263,7 @@ evaluate_all() {
     echo "Phase 5: Evaluating all trained models"
     echo "============================================"
     
-    eval "$(conda shell.bash hook)"
-    conda activate "$CONDA_ENV"
+    activate_env
     cd "$CODE_DIR"
     
     # REINFORCE (no curriculum)
@@ -317,8 +324,7 @@ analyze() {
     echo "Phase 6: Generating analysis"
     echo "============================================"
     
-    eval "$(conda shell.bash hook)"
-    conda activate "$CONDA_ENV"
+    activate_env
     cd "$CODE_DIR"
     
     python analyze_results.py \
