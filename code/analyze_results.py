@@ -599,8 +599,8 @@ def generate_ablation_table(df, output_dir):
     for (model, mode), group in df.groupby(['model', 'mode']):
         scores = group['final_score'].values
         mean, ci_lo, ci_hi, std, n = compute_confidence_interval(scores)
-        success = (scores >= 95).sum() / len(scores) * 100
-        failure = (scores <= 10).sum() / len(scores) * 100
+        success = group['success'].mean() * 100
+        failure = group['collapsed'].mean() * 100
         
         rows.append({
             "Model": model,
