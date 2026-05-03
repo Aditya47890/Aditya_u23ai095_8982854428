@@ -1,0 +1,24 @@
+{
+  "model": "GRPO-DPO-Curriculum",
+  "mode": "Think",
+  "n_dialogues": 18,
+  "score_mean": 25.333333333333332,
+  "score_ci": [
+    21.322253140309712,
+    29.344413526356952
+  ],
+  "score_std": 8.065905003743335,
+  "reward_mean": 0.3849950047101988,
+  "reward_ci": [
+    0.35657134641358323,
+    0.4134186630068144
+  ],
+  "success_rate": 0.0,
+  "failure_rate": 83.33333333333334,
+  "neutral_rate": 16.666666666666664,
+  "diagnostics": {
+    "avg_response_length": 46.72222222222222,
+    "length_normalized_reward": 0.06990786250614289,
+    "generic_template_rate": 0.3148148148148148
+  }
+}

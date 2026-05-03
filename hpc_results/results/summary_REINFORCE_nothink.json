@@ -1,0 +1,24 @@
+{
+  "model": "REINFORCE",
+  "mode": "NoThink",
+  "n_dialogues": 18,
+  "score_mean": 25.72222222222222,
+  "score_ci": [
+    18.95126464393784,
+    32.4931798005066
+  ],
+  "score_std": 13.615758843666734,
+  "reward_mean": 0.39414814814814814,
+  "reward_ci": [
+    0.365081358872704,
+    0.4232149374235923
+  ],
+  "success_rate": 5.555555555555555,
+  "failure_rate": 83.33333333333334,
+  "neutral_rate": 11.11111111111111,
+  "diagnostics": {
+    "avg_response_length": 76.25,
+    "length_normalized_reward": 0.06549859275389813,
+    "generic_template_rate": 0.3333333333333333
+  }
+}

@@ -1,0 +1,1521 @@
+============================================
+Phase 1: Setting up environment
+============================================
+  [INFO] Conda env 'rlver' not found, using current environment
+Creating conda environment: rlver
+2 channel Terms of Service accepted
+Retrieving notices: - \ | / - \ done
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): / - \ | / - \ | / - \ | / - \ | / - \ | / - done
+Solving environment: | done
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 26.1.1
+    latest version: 26.3.2
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/RL/miniconda3/envs/rlver
+
+  added / updated specs:
+    - python=3.10
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    libzlib-1.3.1              |       h47b2149_1          59 KB
+    zlib-1.3.1                 |       h47b2149_1          89 KB
+    ------------------------------------------------------------
+                                           Total:         148 KB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu 
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h5eee18b_6 
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2026.3.19-h06a4308_0 
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.44-h9e0c5a2_3 
+  libexpat           pkgs/main/linux-64::libexpat-2.7.5-h7354ed3_0 
+  libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_1 
+  libgcc             pkgs/main/linux-64::libgcc-15.2.0-h69a1729_7 
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-15.2.0-h166f726_7 
+  libgomp            pkgs/main/linux-64::libgomp-15.2.0-h4751f2c_7 
+  libnsl             pkgs/main/linux-64::libnsl-2.0.0-h5eee18b_0 
+  libstdcxx          pkgs/main/linux-64::libstdcxx-15.2.0-h39759b7_7 
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-15.2.0-hc03a8fd_7 
+  libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0 
+  libxcb             pkgs/main/linux-64::libxcb-1.17.0-h9b100fa_0 
+  libzlib            pkgs/main/linux-64::libzlib-1.3.1-h47b2149_1 
+  ncurses            pkgs/main/linux-64::ncurses-6.5-h7934f7d_0 
+  openssl            pkgs/main/linux-64::openssl-3.5.6-h1b28b03_0 
+  packaging          pkgs/main/linux-64::packaging-26.0-py310h06a4308_0 
+  pip                pkgs/main/noarch::pip-26.0.1-pyhc872135_1 
+  pthread-stubs      pkgs/main/linux-64::pthread-stubs-0.3-h0ce48e5_1 
+  python             pkgs/main/linux-64::python-3.10.20-h741d88c_0 
+  readline           pkgs/main/linux-64::readline-8.3-hc2a1206_0 
+  setuptools         pkgs/main/linux-64::setuptools-82.0.1-py310h06a4308_0 
+  sqlite             pkgs/main/linux-64::sqlite-3.51.2-h3e8d24a_0 
+  tk                 pkgs/main/linux-64::tk-8.6.15-h54e0aa7_0 
+  tzdata             pkgs/main/noarch::tzdata-2026a-he532380_0 
+  wheel              pkgs/main/linux-64::wheel-0.46.3-py310h06a4308_0 
+  xorg-libx11        pkgs/main/linux-64::xorg-libx11-1.8.12-h9b100fa_1 
+  xorg-libxau        pkgs/main/linux-64::xorg-libxau-1.0.12-h9b100fa_0 
+  xorg-libxdmcp      pkgs/main/linux-64::xorg-libxdmcp-1.1.5-h9b100fa_0 
+  xorg-xorgproto     pkgs/main/linux-64::xorg-xorgproto-2024.1-h5eee18b_1 
+  xz                 pkgs/main/linux-64::xz-5.8.2-h448239c_0 
+  zlib               pkgs/main/linux-64::zlib-1.3.1-h47b2149_1 
+
+
+
+Downloading and Extracting Packages: ...working...zlib-1.3.1           | 89 KB     |            |   0% 
+libzlib-1.3.1        | 59 KB     |            |   0% [Azlib-1.3.1           | 89 KB     | ########## | 100% zlib-1.3.1           | 89 KB     | ########## | 100% zlib-1.3.1           | 89 KB     | ########## | 100% 
+libzlib-1.3.1        | 59 KB     | ##7        |  27% [A
+libzlib-1.3.1        | 59 KB     | ########## | 100% [A
+libzlib-1.3.1        | 59 KB     | ########## | 100% [A                                                     
+                                                     [A done
+Preparing transaction: - \ | / done
+Verifying transaction: \ | / - \ | / - \ | / - \ | / - \ done
+Executing transaction: / - \ | / - \ | / - \ | / - \ | done
+#
+# To activate this environment, use
+#
+#     $ conda activate rlver
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Installing dependencies...
+Looking in indexes: https://download.pytorch.org/whl/cu130
+Collecting torch
+  Using cached https://download-r2.pytorch.org/whl/cu130/torch-2.11.0%2Bcu130-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (29 kB)
+Collecting torchvision
+  Using cached https://download-r2.pytorch.org/whl/cu130/torchvision-0.26.0%2Bcu130-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting torchaudio
+  Using cached https://download-r2.pytorch.org/whl/cu130/torchaudio-2.11.0%2Bcu130-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (6.9 kB)
+Collecting filelock (from torch)
+  Using cached filelock-3.25.2-py3-none-any.whl.metadata (2.0 kB)
+Collecting typing-extensions>=4.10.0 (from torch)
+  Using cached https://download.pytorch.org/whl/typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting setuptools<82 (from torch)
+  Using cached https://download.pytorch.org/whl/setuptools-70.2.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting sympy>=1.13.3 (from torch)
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx>=2.5.1 (from torch)
+  Using cached networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting jinja2 (from torch)
+  Using cached https://download.pytorch.org/whl/jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec>=0.8.5 (from torch)
+  Using cached fsspec-2026.2.0-py3-none-any.whl.metadata (10 kB)
+Collecting cuda-toolkit==13.0.2 (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/cuda-toolkit/cuda_toolkit-13.0.2-py2.py3-none-any.whl (2.4 kB)
+Collecting cuda-bindings<14,>=13.0.3 (from torch)
+  Using cached https://download.pytorch.org/whl/cuda_bindings-13.0.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+Collecting nvidia-cudnn-cu13==9.19.0.56 (from torch)
+  Downloading https://pypi.nvidia.com/nvidia-cudnn-cu13/nvidia_cudnn_cu13-9.19.0.56-py3-none-manylinux_2_27_x86_64.whl (366.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 366.1/366.1 MB 10.6 MB/s  0:00:34
+Collecting nvidia-cusparselt-cu13==0.8.0 (from torch)
+  Downloading https://pypi.nvidia.com/nvidia-cusparselt-cu13/nvidia_cusparselt_cu13-0.8.0-py3-none-manylinux2014_x86_64.whl (169.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 169.9/169.9 MB 11.5 MB/s  0:00:14
+Collecting nvidia-nccl-cu13==2.28.9 (from torch)
+  Downloading https://pypi.nvidia.com/nvidia-nccl-cu13/nvidia_nccl_cu13-2.28.9-py3-none-manylinux_2_18_x86_64.whl (196.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.5/196.5 MB 10.3 MB/s  0:00:19
+Collecting nvidia-nvshmem-cu13==3.4.5 (from torch)
+  Downloading https://pypi.nvidia.com/nvidia-nvshmem-cu13/nvidia_nvshmem_cu13-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (60.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.4/60.4 MB 9.0 MB/s  0:00:06
+Collecting triton==3.6.0 (from torch)
+  Using cached https://download-r2.pytorch.org/whl/triton-3.6.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusparse==12.6.3.3.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-cusparse/nvidia_cusparse-12.6.3.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (145.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 145.9/145.9 MB 10.4 MB/s  0:00:14
+Collecting nvidia-cuda-nvrtc==13.0.88.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-cuda-nvrtc/nvidia_cuda_nvrtc-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (90.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.2/90.2 MB 11.7 MB/s  0:00:07
+Collecting nvidia-cuda-cupti==13.0.85.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-cuda-cupti/nvidia_cuda_cupti-13.0.85-py3-none-manylinux_2_25_x86_64.whl (10.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 11.6 MB/s  0:00:00
+Collecting nvidia-curand==10.4.0.35.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-curand/nvidia_curand-10.4.0.35-py3-none-manylinux_2_27_x86_64.whl (59.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.5/59.5 MB 11.4 MB/s  0:00:05
+Collecting nvidia-cufft==12.0.0.61.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-cufft/nvidia_cufft-12.0.0.61-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (214.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.1/214.1 MB 11.3 MB/s  0:00:18
+Collecting nvidia-cusolver==12.0.4.66.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-cusolver/nvidia_cusolver-12.0.4.66-py3-none-manylinux_2_27_x86_64.whl (200.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.9/200.9 MB 10.9 MB/s  0:00:18
+Collecting nvidia-nvtx==13.0.85.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-nvtx/nvidia_nvtx-13.0.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (148 kB)
+Collecting nvidia-cufile==1.15.1.6.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-cufile/nvidia_cufile-1.15.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 11.6 MB/s  0:00:00
+Collecting nvidia-cuda-runtime==13.0.96.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-cuda-runtime/nvidia_cuda_runtime-13.0.96-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 15.0 MB/s  0:00:00
+Collecting nvidia-nvjitlink==13.0.88.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-nvjitlink/nvidia_nvjitlink-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (40.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.7/40.7 MB 11.8 MB/s  0:00:03
+Collecting nvidia-cublas==13.1.0.3.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading https://pypi.nvidia.com/nvidia-cublas/nvidia_cublas-13.1.0.3-py3-none-manylinux_2_27_x86_64.whl (423.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 423.1/423.1 MB 11.4 MB/s  0:00:37
+Collecting cuda-pathfinder~=1.1 (from cuda-bindings<14,>=13.0.3->torch)
+  Using cached https://download.pytorch.org/whl/cuda_pathfinder-1.2.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting numpy (from torchvision)
+  Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+Collecting pillow!=8.3.*,>=5.3.0 (from torchvision)
+  Using cached pillow-12.1.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch)
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch)
+  Using cached https://download.pytorch.org/whl/markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Using cached https://download-r2.pytorch.org/whl/cu130/torch-2.11.0%2Bcu130-cp310-cp310-manylinux_2_28_x86_64.whl (531.0 MB)
+Using cached https://download-r2.pytorch.org/whl/triton-3.6.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (188.1 MB)
+Using cached https://download.pytorch.org/whl/cuda_bindings-13.0.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.1 MB)
+Using cached https://download.pytorch.org/whl/cuda_pathfinder-1.2.2-py3-none-any.whl (23 kB)
+Using cached https://download.pytorch.org/whl/setuptools-70.2.0-py3-none-any.whl (930 kB)
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='download-r2.pytorch.org', port=443): Read timed out. (read timeout=15)")': /whl/cu130/torchvision-0.26.0%2Bcu130-cp310-cp310-manylinux_2_28_x86_64.whl
+Using cached https://download-r2.pytorch.org/whl/cu130/torchvision-0.26.0%2Bcu130-cp310-cp310-manylinux_2_28_x86_64.whl (7.5 MB)
+Using cached https://download-r2.pytorch.org/whl/cu130/torchaudio-2.11.0%2Bcu130-cp310-cp310-manylinux_2_28_x86_64.whl (1.7 MB)
+Using cached fsspec-2026.2.0-py3-none-any.whl (202 kB)
+Using cached networkx-3.4.2-py3-none-any.whl (1.7 MB)
+Using cached pillow-12.1.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Using cached https://download.pytorch.org/whl/typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached filelock-3.25.2-py3-none-any.whl (26 kB)
+Using cached https://download.pytorch.org/whl/jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached https://download.pytorch.org/whl/markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+Installing collected packages: torchaudio, nvidia-cusparselt-cu13, mpmath, cuda-toolkit, typing-extensions, triton, sympy, setuptools, pillow, nvidia-nvtx, nvidia-nvshmem-cu13, nvidia-nvjitlink, nvidia-nccl-cu13, nvidia-curand, nvidia-cufile, nvidia-cuda-runtime, nvidia-cuda-nvrtc, nvidia-cuda-cupti, nvidia-cublas, numpy, networkx, MarkupSafe, fsspec, filelock, cuda-pathfinder, nvidia-cusparse, nvidia-cufft, nvidia-cudnn-cu13, jinja2, cuda-bindings, nvidia-cusolver, torch, torchvision
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 82.0.1
+    Uninstalling setuptools-82.0.1:
+      Successfully uninstalled setuptools-82.0.1
+
+Successfully installed MarkupSafe-3.0.3 cuda-bindings-13.0.3 cuda-pathfinder-1.2.2 cuda-toolkit-13.0.2 filelock-3.25.2 fsspec-2026.2.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.4.2 numpy-2.2.6 nvidia-cublas-13.1.0.3 nvidia-cuda-cupti-13.0.85 nvidia-cuda-nvrtc-13.0.88 nvidia-cuda-runtime-13.0.96 nvidia-cudnn-cu13-9.19.0.56 nvidia-cufft-12.0.0.61 nvidia-cufile-1.15.1.6 nvidia-curand-10.4.0.35 nvidia-cusolver-12.0.4.66 nvidia-cusparse-12.6.3.3 nvidia-cusparselt-cu13-0.8.0 nvidia-nccl-cu13-2.28.9 nvidia-nvjitlink-13.0.88 nvidia-nvshmem-cu13-3.4.5 nvidia-nvtx-13.0.85 pillow-12.1.1 setuptools-70.2.0 sympy-1.14.0 torch-2.11.0+cu130 torchaudio-2.11.0+cu130 torchvision-0.26.0+cu130 triton-3.6.0 typing-extensions-4.15.0
+Collecting transformers==4.46.0
+  Using cached transformers-4.46.0-py3-none-any.whl.metadata (44 kB)
+Collecting accelerate
+  Using cached accelerate-1.13.0-py3-none-any.whl.metadata (19 kB)
+Collecting bitsandbytes
+  Using cached bitsandbytes-0.49.2-py3-none-manylinux_2_24_x86_64.whl.metadata (10 kB)
+Collecting peft
+  Using cached peft-0.19.1-py3-none-any.whl.metadata (15 kB)
+Collecting trl
+  Using cached trl-1.2.0-py3-none-any.whl.metadata (11 kB)
+Collecting datasets
+  Using cached datasets-4.8.4-py3-none-any.whl.metadata (19 kB)
+Collecting scipy
+  Using cached scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Requirement already satisfied: numpy in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (2.2.6)
+Collecting pandas
+  Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+Collecting matplotlib
+  Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (52 kB)
+Collecting seaborn
+  Using cached seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting huggingface_hub
+  Downloading huggingface_hub-1.12.0-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: filelock in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from transformers==4.46.0) (3.25.2)
+  Using cached huggingface_hub-0.36.2-py3-none-any.whl.metadata (15 kB)
+Requirement already satisfied: packaging>=20.0 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from transformers==4.46.0) (26.0)
+Collecting pyyaml>=5.1 (from transformers==4.46.0)
+  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting regex!=2019.12.17 (from transformers==4.46.0)
+  Using cached regex-2026.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting requests (from transformers==4.46.0)
+  Using cached requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+Collecting safetensors>=0.4.1 (from transformers==4.46.0)
+  Using cached safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting tokenizers<0.21,>=0.20 (from transformers==4.46.0)
+  Downloading tokenizers-0.20.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Collecting tqdm>=4.27 (from transformers==4.46.0)
+  Using cached tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+Requirement already satisfied: fsspec>=2023.5.0 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from huggingface_hub) (2026.2.0)
+Collecting hf-xet<2.0.0,>=1.1.3 (from huggingface_hub)
+  Using cached hf_xet-1.4.3-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from huggingface_hub) (4.15.0)
+Collecting psutil (from accelerate)
+  Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Requirement already satisfied: torch>=2.0.0 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from accelerate) (2.11.0+cu130)
+Requirement already satisfied: setuptools<82 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from torch>=2.0.0->accelerate) (70.2.0)
+Requirement already satisfied: sympy>=1.13.3 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from torch>=2.0.0->accelerate) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from torch>=2.0.0->accelerate) (3.4.2)
+Requirement already satisfied: jinja2 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from torch>=2.0.0->accelerate) (3.1.6)
+Requirement already satisfied: cuda-toolkit==13.0.2 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.2)
+Requirement already satisfied: cuda-bindings<14,>=13.0.3 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from torch>=2.0.0->accelerate) (13.0.3)
+Requirement already satisfied: nvidia-cudnn-cu13==9.19.0.56 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from torch>=2.0.0->accelerate) (9.19.0.56)
+Requirement already satisfied: nvidia-cusparselt-cu13==0.8.0 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from torch>=2.0.0->accelerate) (0.8.0)
+Requirement already satisfied: nvidia-nccl-cu13==2.28.9 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from torch>=2.0.0->accelerate) (2.28.9)
+Requirement already satisfied: nvidia-nvshmem-cu13==3.4.5 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from torch>=2.0.0->accelerate) (3.4.5)
+Requirement already satisfied: triton==3.6.0 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from torch>=2.0.0->accelerate) (3.6.0)
+Requirement already satisfied: nvidia-nvtx==13.0.85.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.85)
+Requirement already satisfied: nvidia-cuda-runtime==13.0.96.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.96)
+Requirement already satisfied: nvidia-cuda-cupti==13.0.85.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.85)
+Requirement already satisfied: nvidia-cuda-nvrtc==13.0.88.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.88)
+Requirement already satisfied: nvidia-cusolver==12.0.4.66.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.0.4.66)
+Requirement already satisfied: nvidia-curand==10.4.0.35.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (10.4.0.35)
+Requirement already satisfied: nvidia-cusparse==12.6.3.3.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.6.3.3)
+Requirement already satisfied: nvidia-nvjitlink==13.0.88.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.88)
+Requirement already satisfied: nvidia-cufft==12.0.0.61.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.0.0.61)
+Requirement already satisfied: nvidia-cublas==13.1.0.3.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.1.0.3)
+Requirement already satisfied: nvidia-cufile==1.15.1.6.* in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (1.15.1.6)
+Requirement already satisfied: cuda-pathfinder~=1.1 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from cuda-bindings<14,>=13.0.3->torch>=2.0.0->accelerate) (1.2.2)
+INFO: pip is looking at multiple versions of trl to determine which version is compatible with other requirements. This could take a while.
+Collecting trl
+  Using cached trl-1.1.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-1.0.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.29.1-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.29.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.28.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.27.2-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.27.1-py3-none-any.whl.metadata (11 kB)
+INFO: pip is still looking at multiple versions of trl to determine which version is compatible with other requirements. This could take a while.
+  Using cached trl-0.27.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.26.2-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.26.1-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.26.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.25.1-py3-none-any.whl.metadata (11 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+  Using cached trl-0.25.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.24.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.23.1-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.23.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.22.2-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.22.1-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.22.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.21.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.20.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.19.1-py3-none-any.whl.metadata (10 kB)
+  Using cached trl-0.19.0-py3-none-any.whl.metadata (10 kB)
+  Using cached trl-0.18.2-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.18.1-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.18.0-py3-none-any.whl.metadata (11 kB)
+  Using cached trl-0.17.0-py3-none-any.whl.metadata (12 kB)
+Collecting rich (from trl)
+  Using cached rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting pyarrow>=21.0.0 (from datasets)
+  Downloading pyarrow-24.0.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting dill<0.4.2,>=0.3.0 (from datasets)
+  Using cached dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+Collecting httpx<1.0.0 (from datasets)
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting xxhash (from datasets)
+  Using cached xxhash-3.6.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting multiprocess<0.70.20 (from datasets)
+  Using cached multiprocess-0.70.19-py310-none-any.whl.metadata (7.5 kB)
+Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Using cached aiohttp-3.13.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+Collecting anyio (from httpx<1.0.0->datasets)
+  Using cached anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting certifi (from httpx<1.0.0->datasets)
+  Downloading certifi-2026.4.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx<1.0.0->datasets)
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx<1.0.0->datasets)
+  Downloading idna-3.13-py3-none-any.whl.metadata (8.0 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0->datasets)
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas)
+  Using cached pytz-2026.1.post1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas)
+  Downloading tzdata-2026.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Using cached contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Using cached fonttools-4.62.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (117 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Using cached kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (5.1 kB)
+Requirement already satisfied: pillow>=8 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from matplotlib) (12.1.1)
+Collecting pyparsing>=3 (from matplotlib)
+  Using cached pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting async-timeout<6.0,>=4.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Using cached async_timeout-5.0.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting attrs>=17.3.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Using cached frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Using cached multidict-6.7.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting propcache>=0.2.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Using cached propcache-0.4.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+  Using cached yarl-1.23.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting charset_normalizer<4,>=2 (from requests->transformers==4.46.0)
+  Using cached charset_normalizer-3.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting urllib3<3,>=1.26 (from requests->transformers==4.46.0)
+  Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from sympy>=1.13.3->torch>=2.0.0->accelerate) (1.3.0)
+Collecting exceptiongroup>=1.0.2 (from anyio->httpx<1.0.0->datasets)
+  Using cached exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages (from jinja2->torch>=2.0.0->accelerate) (3.0.3)
+Collecting markdown-it-py>=2.2.0 (from rich->trl)
+  Using cached markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->trl)
+  Using cached pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->trl)
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+WARNING: The candidate selected for download or install is a yanked version: 'transformers' candidate (version 4.46.0 at https://files.pythonhosted.org/packages/db/88/1ef8a624a33d7fe460a686b9e0194a7916320fc0d67d4e38e570beeac039/transformers-4.46.0-py3-none-any.whl (from https://pypi.org/simple/transformers/) (requires-python:>=3.8.0))
+Reason for being yanked: This version unfortunately does not work with 3.8 but we did not drop the support yet 
+Using cached transformers-4.46.0-py3-none-any.whl (10.0 MB)
+Using cached huggingface_hub-0.36.2-py3-none-any.whl (566 kB)
+Using cached hf_xet-1.4.3-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+Downloading tokenizers-0.20.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 7.4 MB/s  0:00:00
+Using cached accelerate-1.13.0-py3-none-any.whl (383 kB)
+Using cached bitsandbytes-0.49.2-py3-none-manylinux_2_24_x86_64.whl (60.7 MB)
+Using cached peft-0.19.1-py3-none-any.whl (680 kB)
+Using cached trl-0.17.0-py3-none-any.whl (348 kB)
+Using cached datasets-4.8.4-py3-none-any.whl (526 kB)
+Using cached dill-0.4.1-py3-none-any.whl (120 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Using cached multiprocess-0.70.19-py310-none-any.whl (134 kB)
+Using cached scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+Using cached pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 8.3 MB/s  0:00:01
+Using cached seaborn-0.13.2-py3-none-any.whl (294 kB)
+Using cached aiohttp-3.13.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+Using cached async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+Using cached multidict-6.7.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (243 kB)
+Using cached yarl-1.23.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (102 kB)
+Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached fonttools-4.62.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.9 MB)
+Using cached frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (219 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading idna-3.13-py3-none-any.whl (68 kB)
+Using cached kiwisolver-1.5.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+Using cached propcache-0.4.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (196 kB)
+Downloading pyarrow-24.0.0-cp310-cp310-manylinux_2_28_x86_64.whl (48.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.8/48.8 MB 5.9 MB/s  0:00:08
+Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
+Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+Using cached regex-2026.4.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (793 kB)
+Using cached requests-2.33.1-py3-none-any.whl (64 kB)
+Using cached charset_normalizer-3.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (216 kB)
+Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+Downloading certifi-2026.4.22-py3-none-any.whl (135 kB)
+Using cached safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (507 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached tqdm-4.67.3-py3-none-any.whl (78 kB)
+Downloading tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+Using cached anyio-4.13.0-py3-none-any.whl (114 kB)
+Using cached exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Using cached rich-15.0.0-py3-none-any.whl (310 kB)
+Using cached pygments-2.20.0-py3-none-any.whl (1.2 MB)
+Using cached markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Using cached xxhash-3.6.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (193 kB)
+Installing collected packages: pytz, xxhash, urllib3, tzdata, tqdm, six, scipy, safetensors, regex, pyyaml, pyparsing, pygments, pyarrow, psutil, propcache, multidict, mdurl, kiwisolver, idna, hf-xet, h11, frozenlist, fonttools, exceptiongroup, dill, cycler, contourpy, charset_normalizer, certifi, attrs, async-timeout, aiohappyeyeballs, yarl, requests, python-dateutil, multiprocess, markdown-it-py, httpcore, anyio, aiosignal, rich, pandas, matplotlib, huggingface_hub, httpx, aiohttp, tokenizers, seaborn, transformers, datasets, bitsandbytes, accelerate, trl, peft
+
+Successfully installed accelerate-1.13.0 aiohappyeyeballs-2.6.1 aiohttp-3.13.5 aiosignal-1.4.0 anyio-4.13.0 async-timeout-5.0.1 attrs-26.1.0 bitsandbytes-0.49.2 certifi-2026.4.22 charset_normalizer-3.4.7 contourpy-1.3.2 cycler-0.12.1 datasets-4.8.4 dill-0.4.1 exceptiongroup-1.3.1 fonttools-4.62.1 frozenlist-1.8.0 h11-0.16.0 hf-xet-1.4.3 httpcore-1.0.9 httpx-0.28.1 huggingface_hub-0.36.2 idna-3.13 kiwisolver-1.5.0 markdown-it-py-4.0.0 matplotlib-3.10.9 mdurl-0.1.2 multidict-6.7.1 multiprocess-0.70.19 pandas-2.3.3 peft-0.19.1 propcache-0.4.1 psutil-7.2.2 pyarrow-24.0.0 pygments-2.20.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 pytz-2026.1.post1 pyyaml-6.0.3 regex-2026.4.4 requests-2.33.1 rich-15.0.0 safetensors-0.7.0 scipy-1.15.3 seaborn-0.13.2 six-1.17.0 tokenizers-0.20.3 tqdm-4.67.3 transformers-4.46.0 trl-0.17.0 tzdata-2026.2 urllib3-2.6.3 xxhash-3.6.0 yarl-1.23.0
+
+Environment ready!
+  GPU: NVIDIA RTX PRO 4500 Blackwell
+  VRAM: 33.7 GB
+
+============================================
+Phase 2: Downloading models
+============================================
+--- Downloading Qwen2.5-1.5B-Instruct ---
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2582.54it/s]
+Base model downloaded!
+--- Downloading Qwen2.5-7B-Instruct ---
+Fetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Fetching 14 files: 100%|██████████| 14/14 [00:00<00:00, 2734.86it/s]
+Simulator model downloaded!
+
+All models downloaded!
+
+============================================
+Phase 3: Evaluating baseline models
+============================================
+--- Evaluating Qwen2.5-1.5B Base ---
+Loading simulator: /home/RL/RLVER_PROJECT/models/qwen2.5-7b-sim
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.31it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.42it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.48it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.56it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.51it/s]
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Simulator loaded. VRAM: 5.60 GB
+Loading policy: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+Policy loaded. VRAM: 6.76 GB
+
+============================================================
+Evaluating: Baseline (Think)
+============================================================
+
+  [MOOD_REVERSAL] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [ESCALATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [GASLIGHTING] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [FACT_EMOTION_CONTRADICTION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [EMOTIONAL_FLOODING] — 3 dialogues
+    [01] turns=6 final=49 status=NEUTRAL
+    [02] turns=6 final=43 status=NEUTRAL
+    [03] turns=6 final=37 status=NEUTRAL
+
+  [VALIDATION_MANIPULATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=18 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  === Baseline (Think) ===
+  Mean Score: 23.7 ± 9.1 (95% CI: [19.2, 28.3])
+  Mean Reward: 0.3789 (95% CI: [0.3413, 0.4166])
+  Success Rate: 0.0% | Neutral: 16.7% | Failure Rate: 83.3%
+  Avg Response Length: 44 words
+  Generic Template Rate: 0.22/turn
+  Length-Norm Reward: 0.0687 (reward hacking check)
+  Results saved to: /home/RL/RLVER_PROJECT/results/Baseline_think_20260425_104003.json
+
+============================================================
+Evaluating: Baseline (NoThink)
+============================================================
+
+  [MOOD_REVERSAL] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=18 status=PARTIAL_FAILURE
+    [03] turns=6 final=18 status=PARTIAL_FAILURE
+
+  [ESCALATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [GASLIGHTING] — 3 dialogues
+    [01] turns=6 final=22 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [FACT_EMOTION_CONTRADICTION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [EMOTIONAL_FLOODING] — 3 dialogues
+    [01] turns=6 final=51 status=NEUTRAL
+    [02] turns=6 final=45 status=NEUTRAL
+    [03] turns=6 final=65 status=PARTIAL_SUCCESS
+
+  [VALIDATION_MANIPULATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=50 status=NEUTRAL
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  === Baseline (NoThink) ===
+  Mean Score: 27.2 ± 14.5 (95% CI: [19.9, 34.4])
+  Mean Reward: 0.4236 (95% CI: [0.3937, 0.4535])
+  Success Rate: 5.6% | Neutral: 16.7% | Failure Rate: 77.8%
+  Avg Response Length: 86 words
+  Generic Template Rate: 0.32/turn
+  Length-Norm Reward: 0.0686 (reward hacking check)
+  Results saved to: /home/RL/RLVER_PROJECT/results/Baseline_nothink_20260425_104432.json
+
+============================================================
+All results saved to: /home/RL/RLVER_PROJECT/results/combined_Baseline.json
+============================================================
+
+Baseline evaluation complete!
+
+============================================
+Phase 4a: Training REINFORCE models
+============================================
+--- Training: REINFORCE (no curriculum) ---
+  [SEED] Global seed set to 42
+Loading simulator: /home/RL/RLVER_PROJECT/models/qwen2.5-7b-sim
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.35it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.47it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.49it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.58it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.53it/s]
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:1263: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/torch/utils/checkpoint.py:232: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+Simulator loaded. VRAM: 5.60 GB
+
+Loading policy model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+trainable params: 4,358,144 || all params: 1,548,072,448 || trainable%: 0.2815
+Loaded 250 profiles
+
+============================================================
+Starting LoRA Training (REINFORCE)
+Base model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+Epochs: 3, Episodes/epoch: 15
+Curriculum: False, LR: 2e-05
+============================================================
+
+  [E1/3][1/15] emo=10 reward=0.1175 turns=4 loss=-76.1099
+  [E1/3][2/15] emo=58 reward=0.1982 turns=6 loss=35.7759
+  [E1/3][3/15] emo=42 reward=0.1492 turns=6 loss=73.1047
+  [E1/3][4/15] emo=30 reward=0.1342 turns=6 loss=30.9595
+  [E1/3][5/15] emo=42 reward=0.1762 turns=6 loss=-53.0190
+  [E1/3][6/15] emo=9 reward=0.1134 turns=5 loss=-120.8248
+  [E1/3][7/15] emo=10 reward=0.1175 turns=4 loss=-47.5713
+  [E1/3][8/15] emo=30 reward=0.1402 turns=6 loss=-56.4277
+  [E1/3][9/15] emo=7 reward=0.1074 turns=5 loss=-303.1049
+  [E1/3][10/15] emo=17 reward=0.1242 turns=6 loss=-131.9152
+  [STABILITY] WARNING: Reward variance spike! std=0.0920 vs prev=0.0300
+  [E1/3][11/15] emo=28 reward=0.3508 turns=6 loss=-8.7729
+  [STABILITY] WARNING: Reward variance spike! std=0.0900 vs prev=0.0229
+  [E1/3][12/15] emo=22 reward=0.1402 turns=6 loss=-211.5127
+  [STABILITY] WARNING: Reward variance spike! std=0.0929 vs prev=0.0223
+  [E1/3][13/15] emo=7 reward=0.1098 turns=5 loss=-81.8569
+  [STABILITY] WARNING: Reward variance spike! std=0.0917 vs prev=0.0252
+  [E1/3][14/15] emo=10 reward=0.1175 turns=4 loss=-67.0115
+  [STABILITY] WARNING: Reward variance spike! std=0.0924 vs prev=0.0112
+  [E1/3][15/15] emo=10 reward=0.1175 turns=4 loss=-99.5449
+
+  === Epoch 1 Summary ===
+  Mean Reward: 0.1476 | Mean Score: 22.1
+  * New best model saved! (reward=0.1476)
+  [CHECKPOINT] State saved at epoch=1, episode=0
+  [E2/3][1/15] emo=58 reward=0.1982 turns=6 loss=41.7927
+  [E2/3][2/15] emo=15 reward=0.1302 turns=6 loss=-157.6167
+  [E2/3][3/15] emo=14 reward=0.1242 turns=6 loss=-120.7157
+  [E2/3][4/15] emo=40 reward=0.1642 turns=6 loss=-3.6241
+  [E2/3][5/15] emo=50 reward=0.1692 turns=6 loss=85.9636
+  [E2/3][6/15] emo=10 reward=0.1175 turns=4 loss=-53.7833
+  [E2/3][7/15] emo=60 reward=0.2142 turns=6 loss=-351.3546
+  [E2/3][8/15] emo=10 reward=0.1500 turns=4 loss=-292.1883
+  [E2/3][9/15] emo=12 reward=0.1082 turns=6 loss=-54.8747
+  [E2/3][10/15] emo=40 reward=0.1692 turns=6 loss=-165.3192
+  [E2/3][11/15] emo=9 reward=0.1110 turns=5 loss=-109.8017
+  [E2/3][12/15] emo=20 reward=0.3483 turns=6 loss=-184.4141
+  [E2/3][13/15] emo=22 reward=0.1608 turns=6 loss=-30.6771
+  [E2/3][14/15] emo=30 reward=0.1242 turns=6 loss=-117.5336
+  [E2/3][15/15] emo=7 reward=0.1098 turns=5 loss=-78.3612
+
+  === Epoch 2 Summary ===
+  Mean Reward: 0.1599 | Mean Score: 26.5
+  * New best model saved! (reward=0.1599)
+  [CHECKPOINT] State saved at epoch=2, episode=0
+  [E3/3][1/15] emo=30 reward=0.1242 turns=6 loss=-114.4728
+  [E3/3][2/15] emo=10 reward=0.1175 turns=4 loss=-67.8593
+  [E3/3][3/15] emo=46 reward=0.1607 turns=6 loss=-97.9987
+  [E3/3][4/15] emo=60 reward=0.2017 turns=6 loss=-206.7862
+  [E3/3][5/15] emo=35 reward=0.1547 turns=6 loss=-91.1400
+  [E3/3][6/15] emo=50 reward=0.1892 turns=6 loss=-82.0061
+  [E3/3][7/15] emo=24 reward=0.1282 turns=6 loss=-33.4881
+  [E3/3][8/15] emo=20 reward=0.1142 turns=6 loss=-98.9900
+  [E3/3][9/15] emo=48 reward=0.1682 turns=6 loss=-5.2865
+  [E3/3][10/15] emo=24 reward=0.1322 turns=6 loss=-42.1154
+  [E3/3][11/15] emo=52 reward=0.1952 turns=6 loss=-42.7288
+  [E3/3][12/15] emo=7 reward=0.1074 turns=5 loss=-27.8161
+  [E3/3][13/15] emo=60 reward=0.2017 turns=6 loss=-78.9647
+  [E3/3][14/15] emo=10 reward=0.1175 turns=4 loss=-56.9888
+  [E3/3][15/15] emo=10 reward=0.1092 turns=6 loss=-163.3700
+
+  === Epoch 3 Summary ===
+  Mean Reward: 0.1481 | Mean Score: 32.4
+  [CHECKPOINT] State saved at epoch=3, episode=0
+
+============================================================
+Training complete! (REINFORCE)
+Best model: /home/RL/RLVER_PROJECT/checkpoints/reinforce_no_curriculum/best_model
+Final model: /home/RL/RLVER_PROJECT/checkpoints/reinforce_no_curriculum/final_model
+Training log: /home/RL/RLVER_PROJECT/checkpoints/reinforce_no_curriculum/training_log.json
+============================================================
+--- Training: REINFORCE + Curriculum ---
+  [SEED] Global seed set to 42
+Loading simulator: /home/RL/RLVER_PROJECT/models/qwen2.5-7b-sim
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.36it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.45it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.45it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.53it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.49it/s]
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:1263: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/torch/utils/checkpoint.py:232: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+Simulator loaded. VRAM: 5.60 GB
+
+Loading policy model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+trainable params: 4,358,144 || all params: 1,548,072,448 || trainable%: 0.2815
+Loaded 250 profiles
+
+============================================================
+Starting LoRA Training (REINFORCE)
+Base model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+Epochs: 3, Episodes/epoch: 15
+Curriculum: True, LR: 2e-05
+============================================================
+
+  [E1/3][1/15] emo=7 reward=0.1074 turns=5 loss=-0.1987
+  [E1/3][2/15] emo=56 reward=0.1962 turns=6 loss=-0.4250
+  [E1/3][3/15] emo=20 reward=0.1342 turns=6 loss=-100.7656
+  [E1/3][4/15] emo=10 reward=0.1350 turns=4 loss=-206.9559
+  [E1/3][5/15] emo=10 reward=0.1175 turns=4 loss=-85.0245
+  [E1/3][6/15] emo=34 reward=0.1332 turns=6 loss=55.9371
+  [E1/3][7/15] emo=22 reward=0.1242 turns=6 loss=-149.1511
+  [E1/3][8/15] emo=40 reward=0.1542 turns=6 loss=-41.1048
+  [E1/3][9/15] emo=27 reward=0.1572 turns=6 loss=-214.2409
+  [E1/3][10/15] emo=35 reward=0.1522 turns=6 loss=-295.3689
+  [E1/3][11/15] emo=42 reward=0.1760 turns=6 loss=-170.2155
+  [STABILITY] WARNING: Reward variance spike! std=0.0220 vs prev=0.0069
+  [E1/3][12/15] emo=12 reward=0.1092 turns=6 loss=-33.4602
+  [E1/3][13/15] emo=18 reward=0.1192 turns=6 loss=-38.9878
+  [E1/3][14/15] emo=10 reward=0.1175 turns=4 loss=-43.4514
+  [E1/3][15/15] emo=10 reward=0.1175 turns=4 loss=-2.9790
+
+  === Epoch 1 Summary ===
+  Mean Reward: 0.1367 | Mean Score: 23.5
+  * New best model saved! (reward=0.1367)
+  [CHECKPOINT] State saved at epoch=1, episode=0
+  [E2/3][1/15] emo=32 reward=0.1292 turns=6 loss=-101.8387
+  [E2/3][2/15] emo=10 reward=0.1175 turns=4 loss=-27.3453
+  [E2/3][3/15] emo=10 reward=0.1175 turns=4 loss=4.3353
+  [E2/3][4/15] emo=10 reward=0.1112 turns=6 loss=-45.8181
+  [E2/3][5/15] emo=22 reward=0.1242 turns=6 loss=-130.2956
+  [E2/3][6/15] emo=7 reward=0.1074 turns=5 loss=-86.9553
+  [STABILITY] WARNING: Reward variance spike! std=0.0351 vs prev=0.0045
+  [E2/3][7/15] emo=60 reward=0.2017 turns=6 loss=-60.3029
+  [STABILITY] WARNING: Reward variance spike! std=0.0417 vs prev=0.0047
+  [E2/3][8/15] emo=52 reward=0.1952 turns=6 loss=-82.5964
+  [STABILITY] WARNING: Reward variance spike! std=0.0375 vs prev=0.0058
+  [E2/3][9/15] emo=24 reward=0.1512 turns=6 loss=124.5112
+  [STABILITY] WARNING: Reward variance spike! std=0.0365 vs prev=0.0062
+  [E2/3][10/15] emo=22 reward=0.1302 turns=6 loss=-100.1829
+  [STABILITY] WARNING: Reward variance spike! std=0.0359 vs prev=0.0058
+  [E2/3][11/15] emo=7 reward=0.1098 turns=5 loss=-211.1010
+  [E2/3][12/15] emo=20 reward=0.1342 turns=6 loss=-88.8972
+  [E2/3][13/15] emo=10 reward=0.1175 turns=4 loss=-51.5351
+  [E2/3][14/15] emo=50 reward=0.1692 turns=6 loss=-60.2215
+  [E2/3][15/15] emo=53 reward=0.1817 turns=6 loss=-45.1137
+
+  === Epoch 2 Summary ===
+  Mean Reward: 0.1398 | Mean Score: 25.9
+  * New best model saved! (reward=0.1398)
+  [CHECKPOINT] State saved at epoch=2, episode=0
+  [E3/3][1/15] emo=9 reward=0.1134 turns=5 loss=-158.6528
+  [E3/3][2/15] emo=22 reward=0.1242 turns=6 loss=-51.5497
+  [E3/3][3/15] emo=56 reward=0.1952 turns=6 loss=-3.7701
+  [E3/3][4/15] emo=60 reward=0.2017 turns=6 loss=-5.1155
+  [E3/3][5/15] emo=22 reward=0.1502 turns=6 loss=-270.1882
+  [E3/3][6/15] emo=6 reward=0.1032 turns=6 loss=-134.0599
+  [E3/3][7/15] emo=10 reward=0.1400 turns=4 loss=-141.6142
+  [E3/3][8/15] emo=9 reward=0.1188 turns=6 loss=-261.8410
+  [E3/3][9/15] emo=10 reward=0.1175 turns=4 loss=-274.8841
+  [E3/3][10/15] emo=19 reward=0.1570 turns=6 loss=-319.1630
+  [E3/3][11/15] emo=60 reward=0.2017 turns=6 loss=64.1419
+  [E3/3][12/15] emo=10 reward=0.1175 turns=4 loss=-276.8759
+  [E3/3][13/15] emo=49 reward=0.1712 turns=6 loss=-46.9931
+  [E3/3][14/15] emo=50 reward=0.1692 turns=6 loss=-88.9373
+  [E3/3][15/15] emo=40 reward=0.1542 turns=6 loss=-122.2363
+
+  === Epoch 3 Summary ===
+  Mean Reward: 0.1490 | Mean Score: 28.8
+  * New best model saved! (reward=0.1490)
+  [CHECKPOINT] State saved at epoch=3, episode=0
+
+============================================================
+Training complete! (REINFORCE)
+Best model: /home/RL/RLVER_PROJECT/checkpoints/reinforce_curriculum/best_model
+Final model: /home/RL/RLVER_PROJECT/checkpoints/reinforce_curriculum/final_model
+Training log: /home/RL/RLVER_PROJECT/checkpoints/reinforce_curriculum/training_log.json
+============================================================
+
+REINFORCE training complete!
+
+============================================
+Phase 4b: Training GRPO+DPO models
+============================================
+--- Training: GRPO+DPO (no curriculum) ---
+  [SEED] Global seed set to 42
+Loading simulator: /home/RL/RLVER_PROJECT/models/qwen2.5-7b-sim
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.36it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.48it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.47it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.56it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.52it/s]
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:1263: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/torch/utils/checkpoint.py:232: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+Simulator loaded. VRAM: 5.60 GB
+
+Loading policy model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+trainable params: 4,358,144 || all params: 1,548,072,448 || trainable%: 0.2815
+Loading reference model for DPO...
+Reference model loaded. Total VRAM: 8.40 GB
+Loaded 250 profiles
+
+============================================================
+Starting GRPO + DPO Training
+Base model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+K (group size): 2
+DPO beta: 0.1
+DPO margin filter: 0.05
+Epochs: 3, Episodes/epoch: 15
+============================================================
+
+
+============================================================
+STAGE 1: GRPO (Group Relative Policy Optimization)
+============================================================
+
+  [GRPO E1][1/15] best_emo=10 mean_r=0.1175 best_r=0.1175 K=2 loss=0.0000
+  [GRPO E1][2/15] best_emo=60 mean_r=0.1999 best_r=0.2017 K=2 loss=21.1010
+  [GRPO E1][3/15] best_emo=40 mean_r=0.1333 best_r=0.1492 K=2 loss=38.1131
+  [GRPO E1][4/15] best_emo=40 mean_r=0.2904 best_r=0.4317 K=2 loss=-4.0031
+  [GRPO E1][5/15] best_emo=60 mean_r=0.1904 best_r=0.2017 K=2 loss=1.7109
+  [GRPO E1][6/15] best_emo=15 mean_r=0.1182 best_r=0.1272 K=2 loss=0.6095
+  [GRPO E1][7/15] best_emo=30 mean_r=0.1417 best_r=0.1692 K=2 loss=5.5634
+  [GRPO E1][8/15] best_emo=26 mean_r=0.1322 best_r=0.1332 K=2 loss=10.4924
+  [GRPO E1][9/15] best_emo=7 mean_r=0.1223 best_r=0.1348 K=2 loss=0.2460
+  [GRPO E1][10/15] best_emo=32 mean_r=0.1327 best_r=0.1352 K=2 loss=22.5057
+  [GRPO E1][11/15] best_emo=40 mean_r=0.1482 best_r=0.1642 K=2 loss=-3.9483
+  [GRPO E1][12/15] best_emo=30 mean_r=0.1297 best_r=0.1392 K=2 loss=-9.2230
+  [GRPO E1][13/15] best_emo=10 mean_r=0.1154 best_r=0.1175 K=2 loss=-3.0052
+  [GRPO E1][14/15] best_emo=10 mean_r=0.1175 best_r=0.1175 K=2 loss=0.0000
+  [GRPO E1][15/15] best_emo=42 mean_r=0.1827 best_r=0.1862 K=2 loss=-17.4706
+
+  === GRPO Epoch 1 ===
+  Mean Reward: 0.1515 | Mean Score: 30.1
+  Preference pairs collected: 2
+  [DPO Filter] Accepted: 2/13 (15%) | Mean margin: 0.0390
+  * GRPO model saved! (reward=0.1515)
+  [CHECKPOINT] State saved at epoch=1, episode=0
+  [STABILITY] WARNING: Reward variance spike! std=0.0353 vs prev=0.0089
+  [GRPO E2][1/15] best_emo=52 mean_r=0.2002 best_r=0.2042 K=2 loss=6.7903
+  [STABILITY] WARNING: Reward variance spike! std=0.0353 vs prev=0.0084
+  [GRPO E2][2/15] best_emo=22 mean_r=0.1301 best_r=0.1420 K=2 loss=43.0833
+  [STABILITY] WARNING: Reward variance spike! std=0.0414 vs prev=0.0110
+  [GRPO E2][3/15] best_emo=40 mean_r=0.2263 best_r=0.3225 K=2 loss=21.4584
+  [STABILITY] WARNING: Reward variance spike! std=0.0359 vs prev=0.0118
+  [GRPO E2][4/15] best_emo=30 mean_r=0.1417 best_r=0.1542 K=2 loss=-1.1958
+  [GRPO E2][5/15] best_emo=60 mean_r=0.2017 best_r=0.2017 K=2 loss=0.0000
+  [GRPO E2][6/15] best_emo=10 mean_r=0.1175 best_r=0.1175 K=2 loss=0.0000
+  [GRPO E2][7/15] best_emo=14 mean_r=0.2503 best_r=0.2990 K=2 loss=49.1820
+  [GRPO E2][8/15] best_emo=10 mean_r=0.1133 best_r=0.1175 K=2 loss=-21.7611
+  [GRPO E2][9/15] best_emo=20 mean_r=0.1324 best_r=0.1467 K=2 loss=21.6315
+  [GRPO E2][10/15] best_emo=22 mean_r=0.2568 best_r=0.3155 K=2 loss=25.7336
+  [GRPO E2][11/15] best_emo=22 mean_r=0.1247 best_r=0.1372 K=2 loss=1.4908
+  [GRPO E2][12/15] best_emo=30 mean_r=0.2708 best_r=0.3842 K=2 loss=29.7730
+  [GRPO E2][13/15] best_emo=40 mean_r=0.1517 best_r=0.1592 K=2 loss=2.9919
+  [GRPO E2][14/15] best_emo=10 mean_r=0.1450 best_r=0.1508 K=2 loss=-67.0469
+  [GRPO E2][15/15] best_emo=10 mean_r=0.1113 best_r=0.1175 K=2 loss=-31.1555
+
+  === GRPO Epoch 2 ===
+  Mean Reward: 0.1716 | Mean Score: 26.1
+  Preference pairs collected: 6
+  [DPO Filter] Accepted: 6/26 (23%) | Mean margin: 0.0499
+  * GRPO model saved! (reward=0.1716)
+  [CHECKPOINT] State saved at epoch=2, episode=0
+  [GRPO E3][1/15] best_emo=7 mean_r=0.2595 best_r=0.3698 K=2 loss=-42.5214
+  [GRPO E3][2/15] best_emo=10 mean_r=0.2069 best_r=0.2963 K=2 loss=8.7382
+  [GRPO E3][3/15] best_emo=33 mean_r=0.3415 best_r=0.3425 K=2 loss=-37.3670
+  [GRPO E3][4/15] best_emo=30 mean_r=0.2537 best_r=0.3133 K=2 loss=-16.2868
+  [GRPO E3][5/15] best_emo=38 mean_r=0.1547 best_r=0.1753 K=2 loss=-5.1330
+  [GRPO E3][6/15] best_emo=40 mean_r=0.2023 best_r=0.2983 K=2 loss=-6.8724
+  [GRPO E3][7/15] best_emo=32 mean_r=0.2236 best_r=0.3185 K=2 loss=-30.5856
+  [GRPO E3][8/15] best_emo=8 mean_r=0.1098 best_r=0.1122 K=2 loss=-19.9897
+  [GRPO E3][9/15] best_emo=40 mean_r=0.2694 best_r=0.3717 K=2 loss=-8.0734
+  [GRPO E3][10/15] best_emo=14 mean_r=0.3330 best_r=0.3377 K=2 loss=10.2283
+  [GRPO E3][11/15] best_emo=60 mean_r=0.2017 best_r=0.2017 K=2 loss=0.0000
+  [GRPO E3][12/15] best_emo=10 mean_r=0.1336 best_r=0.1575 K=2 loss=-3.3775
+  [GRPO E3][13/15] best_emo=53 mean_r=0.3070 best_r=0.3682 K=2 loss=13.8389
+  [GRPO E3][14/15] best_emo=10 mean_r=0.1175 best_r=0.1175 K=2 loss=0.0000
+  [GRPO E3][15/15] best_emo=10 mean_r=0.2850 best_r=0.4525 K=2 loss=36.7011
+
+  === GRPO Epoch 3 ===
+  Mean Reward: 0.2266 | Mean Score: 26.3
+  Preference pairs collected: 14
+  [DPO Filter] Accepted: 14/39 (36%) | Mean margin: 0.0760
+  * GRPO model saved! (reward=0.2266)
+  [CHECKPOINT] State saved at epoch=3, episode=0
+
+============================================================
+STAGE 2: DPO (Direct Preference Optimization)
+Preference pairs: 14
+DPO epochs: 2, beta: 0.1
+============================================================
+
+  [DPO Epoch 1/2] avg_loss=0.5174 steps=4
+  [DPO Epoch 2/2] avg_loss=0.4422 steps=4
+
+============================================================
+GRPO+DPO Training Complete!
+Best model: /home/RL/RLVER_PROJECT/checkpoints/grpo_dpo_no_curriculum/best_model
+GRPO model: /home/RL/RLVER_PROJECT/checkpoints/grpo_dpo_no_curriculum/grpo_model
+Preference pairs: 14
+============================================================
+--- Training: GRPO+DPO + Curriculum ---
+  [SEED] Global seed set to 42
+Loading simulator: /home/RL/RLVER_PROJECT/models/qwen2.5-7b-sim
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.31it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.45it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.49it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.56it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.51it/s]
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:1263: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/torch/utils/checkpoint.py:232: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+Simulator loaded. VRAM: 5.60 GB
+
+Loading policy model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+trainable params: 4,358,144 || all params: 1,548,072,448 || trainable%: 0.2815
+Loading reference model for DPO...
+Reference model loaded. Total VRAM: 8.40 GB
+Loaded 250 profiles
+
+============================================================
+Starting GRPO + DPO Training
+Base model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+K (group size): 2
+DPO beta: 0.1
+DPO margin filter: 0.05
+Epochs: 3, Episodes/epoch: 15
+============================================================
+
+
+============================================================
+STAGE 1: GRPO (Group Relative Policy Optimization)
+============================================================
+
+  [GRPO E1][1/15] best_emo=9 mean_r=0.2271 best_r=0.3444 K=2 loss=-20.2612
+  [GRPO E1][2/15] best_emo=60 mean_r=0.1999 best_r=0.2017 K=2 loss=12.5380
+  [GRPO E1][3/15] best_emo=30 mean_r=0.1579 best_r=0.1592 K=2 loss=-1.3183
+  [GRPO E1][4/15] best_emo=22 mean_r=0.1372 best_r=0.1397 K=2 loss=7.6192
+  [GRPO E1][5/15] best_emo=10 mean_r=0.2427 best_r=0.3713 K=2 loss=-6.9297
+  [GRPO E1][6/15] best_emo=58 mean_r=0.1857 best_r=0.1972 K=2 loss=-34.4105
+  [GRPO E1][7/15] best_emo=30 mean_r=0.1357 best_r=0.1392 K=2 loss=-3.7281
+  [GRPO E1][8/15] best_emo=10 mean_r=0.1175 best_r=0.1175 K=2 loss=0.0000
+  [GRPO E1][9/15] best_emo=8 mean_r=0.1221 best_r=0.1300 K=2 loss=56.4829
+  [GRPO E1][10/15] best_emo=58 mean_r=0.1578 best_r=0.1982 K=2 loss=37.9074
+  [GRPO E1][11/15] best_emo=60 mean_r=0.3083 best_r=0.4150 K=2 loss=-19.2078
+  [GRPO E1][12/15] best_emo=60 mean_r=0.1879 best_r=0.2017 K=2 loss=-0.2868
+  [GRPO E1][13/15] best_emo=10 mean_r=0.1313 best_r=0.1450 K=2 loss=46.2870
+  [GRPO E1][14/15] best_emo=20 mean_r=0.1367 best_r=0.1492 K=2 loss=-3.6218
+  [GRPO E1][15/15] best_emo=20 mean_r=0.2254 best_r=0.3217 K=2 loss=-13.1001
+
+  === GRPO Epoch 1 ===
+  Mean Reward: 0.1782 | Mean Score: 31.0
+  Preference pairs collected: 5
+  [DPO Filter] Accepted: 5/14 (36%) | Mean margin: 0.0796
+  * GRPO model saved! (reward=0.1782)
+  [CHECKPOINT] State saved at epoch=1, episode=0
+  [GRPO E2][1/15] best_emo=8 mean_r=0.1122 best_r=0.1142 K=2 loss=-20.1845
+  [GRPO E2][2/15] best_emo=10 mean_r=0.2412 best_r=0.3650 K=2 loss=-13.9081
+  [GRPO E2][3/15] best_emo=10 mean_r=0.1175 best_r=0.1175 K=2 loss=0.0000
+  [GRPO E2][4/15] best_emo=36 mean_r=0.1283 best_r=0.1392 K=2 loss=17.0181
+  [GRPO E2][5/15] best_emo=26 mean_r=0.1584 best_r=0.1677 K=2 loss=28.2112
+  [GRPO E2][6/15] best_emo=15 mean_r=0.1159 best_r=0.1257 K=2 loss=46.3166
+  [GRPO E2][7/15] best_emo=50 mean_r=0.1792 best_r=0.1792 K=2 loss=0.0000
+  [GRPO E2][8/15] best_emo=24 mean_r=0.2748 best_r=0.3723 K=2 loss=8.6301
+  [GRPO E2][9/15] best_emo=50 mean_r=0.1722 best_r=0.1852 K=2 loss=-7.2852
+  [GRPO E2][10/15] best_emo=10 mean_r=0.2266 best_r=0.3458 K=2 loss=52.7756
+  [GRPO E2][11/15] best_emo=9 mean_r=0.1134 best_r=0.1134 K=2 loss=0.0000
+  [GRPO E2][12/15] best_emo=23 mean_r=0.1254 best_r=0.1307 K=2 loss=33.5214
+  [GRPO E2][13/15] best_emo=10 mean_r=0.1158 best_r=0.1175 K=2 loss=-39.2778
+  [GRPO E2][14/15] best_emo=50 mean_r=0.3129 best_r=0.4242 K=2 loss=8.8893
+  [GRPO E2][15/15] best_emo=60 mean_r=0.1854 best_r=0.2017 K=2 loss=9.0365
+
+  === GRPO Epoch 2 ===
+  Mean Reward: 0.1720 | Mean Score: 26.1
+  Preference pairs collected: 9
+  [DPO Filter] Accepted: 9/26 (35%) | Mean margin: 0.0829
+  [CHECKPOINT] State saved at epoch=2, episode=0
+  [GRPO E3][1/15] best_emo=42 mean_r=0.1377 best_r=0.1502 K=2 loss=-24.9955
+  [GRPO E3][2/15] best_emo=40 mean_r=0.2867 best_r=0.4042 K=2 loss=-4.1395
+  [GRPO E3][3/15] best_emo=52 mean_r=0.1742 best_r=0.1792 K=2 loss=-3.3445
+  [GRPO E3][4/15] best_emo=50 mean_r=0.2433 best_r=0.3625 K=2 loss=-20.5082
+  [GRPO E3][5/15] best_emo=30 mean_r=0.3496 best_r=0.3758 K=2 loss=24.3562
+  [GRPO E3][6/15] best_emo=9 mean_r=0.1082 best_r=0.1122 K=2 loss=4.3922
+  [GRPO E3][7/15] best_emo=10 mean_r=0.2324 best_r=0.3525 K=2 loss=-14.5682
+  [GRPO E3][8/15] best_emo=11 mean_r=0.1097 best_r=0.1107 K=2 loss=62.0560
+  [GRPO E3][9/15] best_emo=10 mean_r=0.2271 best_r=0.3100 K=2 loss=-24.5842
+  [GRPO E3][10/15] best_emo=34 mean_r=0.2366 best_r=0.3140 K=2 loss=-35.0038
+  [GRPO E3][11/15] best_emo=60 mean_r=0.3887 best_r=0.4533 K=2 loss=15.2039
+  [GRPO E3][12/15] best_emo=10 mean_r=0.2331 best_r=0.3488 K=2 loss=-4.4815
+  [GRPO E3][13/15] best_emo=34 mean_r=0.1407 best_r=0.1482 K=2 loss=-9.8752
+  [GRPO E3][14/15] best_emo=58 mean_r=0.3157 best_r=0.4623 K=2 loss=1.3784
+  [GRPO E3][15/15] best_emo=50 mean_r=0.2933 best_r=0.3908 K=2 loss=27.5551
+
+  === GRPO Epoch 3 ===
+  Mean Reward: 0.2318 | Mean Score: 33.3
+  Preference pairs collected: 19
+  [DPO Filter] Accepted: 19/41 (46%) | Mean margin: 0.1012
+  * GRPO model saved! (reward=0.2318)
+  [CHECKPOINT] State saved at epoch=3, episode=0
+
+============================================================
+STAGE 2: DPO (Direct Preference Optimization)
+Preference pairs: 19
+DPO epochs: 2, beta: 0.1
+============================================================
+
+  [DPO Epoch 1/2] avg_loss=0.4297 steps=5
+  [DPO Epoch 2/2] avg_loss=0.3676 steps=5
+
+============================================================
+GRPO+DPO Training Complete!
+Best model: /home/RL/RLVER_PROJECT/checkpoints/grpo_dpo_curriculum/best_model
+GRPO model: /home/RL/RLVER_PROJECT/checkpoints/grpo_dpo_curriculum/grpo_model
+Preference pairs: 19
+============================================================
+
+GRPO+DPO training complete!
+
+============================================
+Phase 5: Evaluating all trained models
+============================================
+--- Evaluating: REINFORCE ---
+Loading simulator: /home/RL/RLVER_PROJECT/models/qwen2.5-7b-sim
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.36it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.47it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.50it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.58it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.53it/s]
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/peft/tuners/lora/bnb.py:373: UserWarning: Merge lora module to 4-bit linear may get different generations due to rounding errors.
+  warnings.warn(
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Simulator loaded. VRAM: 5.60 GB
+Loading policy: /home/RL/RLVER_PROJECT/checkpoints/reinforce_no_curriculum/best_model
+  Detected LoRA adapter checkpoint
+  Base model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+  LoRA adapter merged successfully
+Policy loaded. VRAM: 6.77 GB
+
+============================================================
+Evaluating: REINFORCE (Think)
+============================================================
+
+  [MOOD_REVERSAL] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=18 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [ESCALATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [GASLIGHTING] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [FACT_EMOTION_CONTRADICTION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [EMOTIONAL_FLOODING] — 3 dialogues
+    [01] turns=6 final=47 status=NEUTRAL
+    [02] turns=6 final=43 status=NEUTRAL
+    [03] turns=6 final=47 status=NEUTRAL
+
+  [VALIDATION_MANIPULATION] — 3 dialogues
+    [01] turns=6 final=30 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=30 status=PARTIAL_FAILURE
+
+  === REINFORCE (Think) ===
+  Mean Score: 25.3 ± 10.0 (95% CI: [20.3, 30.2])
+  Mean Reward: 0.3861 (95% CI: [0.3606, 0.4116])
+  Success Rate: 0.0% | Neutral: 16.7% | Failure Rate: 83.3%
+  Avg Response Length: 45 words
+  Generic Template Rate: 0.28/turn
+  Length-Norm Reward: 0.0701 (reward hacking check)
+  Results saved to: /home/RL/RLVER_PROJECT/results/REINFORCE_think_20260425_122350.json
+
+============================================================
+Evaluating: REINFORCE (NoThink)
+============================================================
+
+  [MOOD_REVERSAL] — 3 dialogues
+    [01] turns=6 final=18 status=PARTIAL_FAILURE
+    [02] turns=6 final=18 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [ESCALATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=18 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [GASLIGHTING] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [FACT_EMOTION_CONTRADICTION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=18 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [EMOTIONAL_FLOODING] — 3 dialogues
+    [01] turns=6 final=44 status=NEUTRAL
+    [02] turns=6 final=65 status=PARTIAL_SUCCESS
+    [03] turns=6 final=52 status=NEUTRAL
+
+  [VALIDATION_MANIPULATION] — 3 dialogues
+    [01] turns=6 final=30 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  === REINFORCE (NoThink) ===
+  Mean Score: 25.7 ± 13.6 (95% CI: [19.0, 32.5])
+  Mean Reward: 0.3941 (95% CI: [0.3651, 0.4232])
+  Success Rate: 5.6% | Neutral: 11.1% | Failure Rate: 83.3%
+  Avg Response Length: 76 words
+  Generic Template Rate: 0.33/turn
+  Length-Norm Reward: 0.0655 (reward hacking check)
+  Results saved to: /home/RL/RLVER_PROJECT/results/REINFORCE_nothink_20260425_122749.json
+
+============================================================
+All results saved to: /home/RL/RLVER_PROJECT/results/combined_REINFORCE.json
+============================================================
+--- Evaluating: REINFORCE+Curriculum ---
+Loading simulator: /home/RL/RLVER_PROJECT/models/qwen2.5-7b-sim
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.30it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.44it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.49it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.58it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.52it/s]
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/peft/tuners/lora/bnb.py:373: UserWarning: Merge lora module to 4-bit linear may get different generations due to rounding errors.
+  warnings.warn(
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Simulator loaded. VRAM: 5.60 GB
+Loading policy: /home/RL/RLVER_PROJECT/checkpoints/reinforce_curriculum/best_model
+  Detected LoRA adapter checkpoint
+  Base model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+  LoRA adapter merged successfully
+Policy loaded. VRAM: 6.77 GB
+
+============================================================
+Evaluating: REINFORCE-Curriculum (Think)
+============================================================
+
+  [MOOD_REVERSAL] — 3 dialogues
+    [01] turns=6 final=18 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=18 status=PARTIAL_FAILURE
+
+  [ESCALATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=30 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [GASLIGHTING] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [FACT_EMOTION_CONTRADICTION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [EMOTIONAL_FLOODING] — 3 dialogues
+    [01] turns=6 final=40 status=NEUTRAL
+    [02] turns=6 final=57 status=NEUTRAL
+    [03] turns=6 final=52 status=NEUTRAL
+
+  [VALIDATION_MANIPULATION] — 3 dialogues
+    [01] turns=6 final=52 status=NEUTRAL
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  === REINFORCE-Curriculum (Think) ===
+  Mean Score: 27.1 ± 13.3 (95% CI: [20.4, 33.7])
+  Mean Reward: 0.3852 (95% CI: [0.3607, 0.4097])
+  Success Rate: 0.0% | Neutral: 22.2% | Failure Rate: 77.8%
+  Avg Response Length: 53 words
+  Generic Template Rate: 0.27/turn
+  Length-Norm Reward: 0.0692 (reward hacking check)
+  Results saved to: /home/RL/RLVER_PROJECT/results/REINFORCE-Curriculum_think_20260425_123116.json
+
+============================================================
+Evaluating: REINFORCE-Curriculum (NoThink)
+============================================================
+
+  [MOOD_REVERSAL] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [ESCALATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [GASLIGHTING] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [FACT_EMOTION_CONTRADICTION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [EMOTIONAL_FLOODING] — 3 dialogues
+    [01] turns=6 final=58 status=NEUTRAL
+    [02] turns=6 final=51 status=NEUTRAL
+    [03] turns=6 final=51 status=NEUTRAL
+
+  [VALIDATION_MANIPULATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=40 status=NEUTRAL
+    [03] turns=6 final=42 status=NEUTRAL
+
+  === REINFORCE-Curriculum (NoThink) ===
+  Mean Score: 27.9 ± 13.6 (95% CI: [21.1, 34.6])
+  Mean Reward: 0.4096 (95% CI: [0.3823, 0.4368])
+  Success Rate: 0.0% | Neutral: 27.8% | Failure Rate: 72.2%
+  Avg Response Length: 84 words
+  Generic Template Rate: 0.33/turn
+  Length-Norm Reward: 0.0669 (reward hacking check)
+  Results saved to: /home/RL/RLVER_PROJECT/results/REINFORCE-Curriculum_nothink_20260425_123531.json
+
+============================================================
+All results saved to: /home/RL/RLVER_PROJECT/results/combined_REINFORCE-Curriculum.json
+============================================================
+--- Evaluating: GRPO+DPO ---
+Loading simulator: /home/RL/RLVER_PROJECT/models/qwen2.5-7b-sim
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.34it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.47it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.49it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.57it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.52it/s]
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/peft/tuners/lora/bnb.py:373: UserWarning: Merge lora module to 4-bit linear may get different generations due to rounding errors.
+  warnings.warn(
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Simulator loaded. VRAM: 5.60 GB
+Loading policy: /home/RL/RLVER_PROJECT/checkpoints/grpo_dpo_no_curriculum/best_model
+  Detected LoRA adapter checkpoint
+  Base model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+  LoRA adapter merged successfully
+Policy loaded. VRAM: 6.77 GB
+
+============================================================
+Evaluating: GRPO-DPO (Think)
+============================================================
+
+  [MOOD_REVERSAL] — 3 dialogues
+    [01] turns=6 final=18 status=PARTIAL_FAILURE
+    [02] turns=6 final=17 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [ESCALATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [GASLIGHTING] — 3 dialogues
+    [01] turns=6 final=28 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [FACT_EMOTION_CONTRADICTION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [EMOTIONAL_FLOODING] — 3 dialogues
+    [01] turns=6 final=42 status=NEUTRAL
+    [02] turns=6 final=40 status=NEUTRAL
+    [03] turns=6 final=51 status=NEUTRAL
+
+  [VALIDATION_MANIPULATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=30 status=PARTIAL_FAILURE
+
+  === GRPO-DPO (Think) ===
+  Mean Score: 24.8 ± 9.7 (95% CI: [19.9, 29.6])
+  Mean Reward: 0.3856 (95% CI: [0.3543, 0.4168])
+  Success Rate: 0.0% | Neutral: 16.7% | Failure Rate: 83.3%
+  Avg Response Length: 47 words
+  Generic Template Rate: 0.21/turn
+  Length-Norm Reward: 0.0702 (reward hacking check)
+  Results saved to: /home/RL/RLVER_PROJECT/results/GRPO-DPO_think_20260425_123903.json
+
+============================================================
+Evaluating: GRPO-DPO (NoThink)
+============================================================
+
+  [MOOD_REVERSAL] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=18 status=PARTIAL_FAILURE
+    [03] turns=6 final=18 status=PARTIAL_FAILURE
+
+  [ESCALATION] — 3 dialogues
+    [01] turns=6 final=30 status=PARTIAL_FAILURE
+    [02] turns=6 final=16 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [GASLIGHTING] — 3 dialogues
+    [01] turns=6 final=22 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [FACT_EMOTION_CONTRADICTION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [EMOTIONAL_FLOODING] — 3 dialogues
+    [01] turns=6 final=55 status=NEUTRAL
+    [02] turns=6 final=52 status=NEUTRAL
+    [03] turns=6 final=47 status=NEUTRAL
+
+  [VALIDATION_MANIPULATION] — 3 dialogues
+    [01] turns=6 final=27 status=PARTIAL_FAILURE
+    [02] turns=6 final=31 status=NEUTRAL
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  === GRPO-DPO (NoThink) ===
+  Mean Score: 26.4 ± 12.2 (95% CI: [20.4, 32.5])
+  Mean Reward: 0.4051 (95% CI: [0.3705, 0.4397])
+  Success Rate: 0.0% | Neutral: 22.2% | Failure Rate: 77.8%
+  Avg Response Length: 72 words
+  Generic Template Rate: 0.31/turn
+  Length-Norm Reward: 0.0679 (reward hacking check)
+  Results saved to: /home/RL/RLVER_PROJECT/results/GRPO-DPO_nothink_20260425_124303.json
+
+============================================================
+All results saved to: /home/RL/RLVER_PROJECT/results/combined_GRPO-DPO.json
+============================================================
+--- Evaluating: GRPO+DPO+Curriculum ---
+Loading simulator: /home/RL/RLVER_PROJECT/models/qwen2.5-7b-sim
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.36it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.46it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.50it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.56it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.52it/s]
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/peft/tuners/lora/bnb.py:373: UserWarning: Merge lora module to 4-bit linear may get different generations due to rounding errors.
+  warnings.warn(
+/home/RL/miniconda3/envs/rlver/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Simulator loaded. VRAM: 5.60 GB
+Loading policy: /home/RL/RLVER_PROJECT/checkpoints/grpo_dpo_curriculum/best_model
+  Detected LoRA adapter checkpoint
+  Base model: /home/RL/RLVER_PROJECT/models/qwen2.5-1.5b
+  LoRA adapter merged successfully
+Policy loaded. VRAM: 6.77 GB
+
+============================================================
+Evaluating: GRPO-DPO-Curriculum (Think)
+============================================================
+
+  [MOOD_REVERSAL] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [ESCALATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=30 status=PARTIAL_FAILURE
+    [03] turns=6 final=30 status=PARTIAL_FAILURE
+
+  [GASLIGHTING] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [FACT_EMOTION_CONTRADICTION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=18 status=PARTIAL_FAILURE
+
+  [EMOTIONAL_FLOODING] — 3 dialogues
+    [01] turns=6 final=37 status=NEUTRAL
+    [02] turns=6 final=40 status=NEUTRAL
+    [03] turns=6 final=44 status=NEUTRAL
+
+  [VALIDATION_MANIPULATION] — 3 dialogues
+    [01] turns=6 final=27 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=30 status=PARTIAL_FAILURE
+
+  === GRPO-DPO-Curriculum (Think) ===
+  Mean Score: 25.3 ± 8.1 (95% CI: [21.3, 29.3])
+  Mean Reward: 0.3850 (95% CI: [0.3566, 0.4134])
+  Success Rate: 0.0% | Neutral: 16.7% | Failure Rate: 83.3%
+  Avg Response Length: 47 words
+  Generic Template Rate: 0.31/turn
+  Length-Norm Reward: 0.0699 (reward hacking check)
+  Results saved to: /home/RL/RLVER_PROJECT/results/GRPO-DPO-Curriculum_think_20260425_124625.json
+
+============================================================
+Evaluating: GRPO-DPO-Curriculum (NoThink)
+============================================================
+
+  [MOOD_REVERSAL] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [ESCALATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=18 status=PARTIAL_FAILURE
+
+  [GASLIGHTING] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [FACT_EMOTION_CONTRADICTION] — 3 dialogues
+    [01] turns=6 final=16 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  [EMOTIONAL_FLOODING] — 3 dialogues
+    [01] turns=6 final=54 status=NEUTRAL
+    [02] turns=6 final=41 status=NEUTRAL
+    [03] turns=6 final=44 status=NEUTRAL
+
+  [VALIDATION_MANIPULATION] — 3 dialogues
+    [01] turns=6 final=20 status=PARTIAL_FAILURE
+    [02] turns=6 final=20 status=PARTIAL_FAILURE
+    [03] turns=6 final=20 status=PARTIAL_FAILURE
+
+  === GRPO-DPO-Curriculum (NoThink) ===
+  Mean Score: 24.1 ± 10.6 (95% CI: [18.8, 29.3])
+  Mean Reward: 0.3972 (95% CI: [0.3698, 0.4247])
+  Success Rate: 0.0% | Neutral: 16.7% | Failure Rate: 83.3%
+  Avg Response Length: 65 words
+  Generic Template Rate: 0.35/turn
+  Length-Norm Reward: 0.0674 (reward hacking check)
+  Results saved to: /home/RL/RLVER_PROJECT/results/GRPO-DPO-Curriculum_nothink_20260425_125005.json
+
+============================================================
+All results saved to: /home/RL/RLVER_PROJECT/results/combined_GRPO-DPO-Curriculum.json
+============================================================
+
+All evaluations complete!
+
+============================================
+Phase 6: Generating analysis
+============================================
+Loaded 180 dialogue results
+
+=== Model Summary ===
+                      mean_score  std_score  success_rate  collapse_rate  mean_reward  mean_validation  mean_diversity  strategy_count  mean_turns
+model                                                                                                                                             
+Baseline                 25.4444    12.0936        0.0278         0.8056       0.4013           0.1273          0.2685          2.1111         6.0
+GRPO-DPO                 25.6111    10.9081        0.0000         0.8056       0.3953           0.1042          0.2700          2.1111         6.0
+GRPO-DPO-Curriculum      24.6944     9.2854        0.0000         0.8333       0.3911           0.1042          0.2573          1.8333         6.0
+REINFORCE                25.5000    11.7631        0.0278         0.8333       0.3901           0.1019          0.2512          1.8611         6.0
+REINFORCE-Curriculum     27.4722    13.2719        0.0000         0.7500       0.3974           0.1181          0.2593          2.0278         6.0
+
+=== Think vs NoThink ===
+                              mean_score  success_rate  mean_reward
+model                mode                                          
+Baseline             NoThink     27.1667        0.0556       0.4236
+                     Think       23.7222        0.0000       0.3789
+GRPO-DPO             NoThink     26.4444        0.0000       0.4051
+                     Think       24.7778        0.0000       0.3856
+GRPO-DPO-Curriculum  NoThink     24.0556        0.0000       0.3972
+                     Think       25.3333        0.0000       0.3850
+REINFORCE            NoThink     25.7222        0.0556       0.3941
+                     Think       25.2778        0.0000       0.3861
+REINFORCE-Curriculum NoThink     27.8889        0.0000       0.4096
+                     Think       27.0556        0.0000       0.3852
+
+=== Per-Scenario ===
+                                                 mean_score  success_rate  mean_reward
+model                trajectory_type                                                  
+Baseline             EMOTIONAL_FLOODING             48.3333        0.1667       0.4947
+                     ESCALATION                     20.0000        0.0000       0.4511
+                     FACT_EMOTION_CONTRADICTION     20.0000        0.0000       0.3914
+                     GASLIGHTING                    20.3333        0.0000       0.3410
+                     MOOD_REVERSAL                  19.3333        0.0000       0.3515
+                     VALIDATION_MANIPULATION        24.6667        0.0000       0.3778
+GRPO-DPO             EMOTIONAL_FLOODING             47.8333        0.0000       0.4993
+                     ESCALATION                     21.0000        0.0000       0.4079
+                     FACT_EMOTION_CONTRADICTION     20.0000        0.0000       0.3885
+                     GASLIGHTING                    21.6667        0.0000       0.3445
+                     MOOD_REVERSAL                  18.5000        0.0000       0.3599
+                     VALIDATION_MANIPULATION        24.6667        0.0000       0.3718
+GRPO-DPO-Curriculum  EMOTIONAL_FLOODING             43.3333        0.0000       0.4460
+                     ESCALATION                     23.0000        0.0000       0.4389
+                     FACT_EMOTION_CONTRADICTION     19.0000        0.0000       0.3713
+                     GASLIGHTING                    20.0000        0.0000       0.3526
+                     MOOD_REVERSAL                  20.0000        0.0000       0.3486
+                     VALIDATION_MANIPULATION        22.8333        0.0000       0.3894
+REINFORCE            EMOTIONAL_FLOODING             49.6667        0.1667       0.4645
+                     ESCALATION                     19.6667        0.0000       0.3942
+                     FACT_EMOTION_CONTRADICTION     19.6667        0.0000       0.3784
+                     GASLIGHTING                    20.0000        0.0000       0.3687
+                     MOOD_REVERSAL                  19.0000        0.0000       0.3514
+                     VALIDATION_MANIPULATION        25.0000        0.0000       0.3833
+REINFORCE-Curriculum EMOTIONAL_FLOODING             51.5000        0.0000       0.4639
+                     ESCALATION                     21.6667        0.0000       0.4196
+                     FACT_EMOTION_CONTRADICTION     20.0000        0.0000       0.4085
+                     GASLIGHTING                    20.0000        0.0000       0.3656
+                     MOOD_REVERSAL                  19.3333        0.0000       0.3561
+                     VALIDATION_MANIPULATION        32.3333        0.0000       0.3707
+Saved: fig_model_comparison.png
+Saved: fig_emotion_trajectory.png
+Saved: fig_radar_chart.png
+Saved: fig_reward_breakdown.png
+Saved: fig_scenario_heatmap.png
+  Saved: /home/RL/RLVER_PROJECT/figures/fig_training_curves.png
+  Saved: /home/RL/RLVER_PROJECT/figures/fig_win_rate_heatmap.png
+  Saved: /home/RL/RLVER_PROJECT/figures/table_ablation_full.csv
+  Saved: /home/RL/RLVER_PROJECT/figures/table_ablation_full.tex
+  Saved: /home/RL/RLVER_PROJECT/figures/fig_diagnostics.png
+
+============================================================
+All outputs saved to: /home/RL/RLVER_PROJECT/figures
+============================================================
+
+============================================================
+ALL PHASES COMPLETE!
+============================================================
+
+Results:  /home/RL/RLVER_PROJECT/results/
+Figures:  /home/RL/RLVER_PROJECT/figures/
+Models:   /home/RL/RLVER_PROJECT/checkpoints/
+
+Copy results to your laptop with:
+  scp -r RL@172.21.1.220:~/RLVER_PROJECT/figures/ .
+  scp -r RL@172.21.1.220:~/RLVER_PROJECT/results/ .
+

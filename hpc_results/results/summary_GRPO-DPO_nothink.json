@@ -1,0 +1,24 @@
+{
+  "model": "GRPO-DPO",
+  "mode": "NoThink",
+  "n_dialogues": 18,
+  "score_mean": 26.444444444444443,
+  "score_ci": [
+    20.37972815430875,
+    32.509160734580135
+  ],
+  "score_std": 12.195574039125459,
+  "reward_mean": 0.4050606446140798,
+  "reward_ci": [
+    0.3704666501550921,
+    0.4396546390730675
+  ],
+  "success_rate": 0.0,
+  "failure_rate": 77.77777777777779,
+  "neutral_rate": 22.22222222222222,
+  "diagnostics": {
+    "avg_response_length": 71.64814814814815,
+    "length_normalized_reward": 0.0679055144177343,
+    "generic_template_rate": 0.3148148148148148
+  }
+}

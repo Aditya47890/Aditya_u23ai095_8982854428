@@ -1,0 +1,24 @@
+{
+  "model": "REINFORCE-Curriculum",
+  "mode": "Think",
+  "n_dialogues": 18,
+  "score_mean": 27.055555555555557,
+  "score_ci": [
+    20.417674969824482,
+    33.69343614128663
+  ],
+  "score_std": 13.348153528274203,
+  "reward_mean": 0.385212962962963,
+  "reward_ci": [
+    0.3606876544321559,
+    0.40973827149377007
+  ],
+  "success_rate": 0.0,
+  "failure_rate": 77.77777777777779,
+  "neutral_rate": 22.22222222222222,
+  "diagnostics": {
+    "avg_response_length": 52.592592592592595,
+    "length_normalized_reward": 0.06920124283157644,
+    "generic_template_rate": 0.2685185185185185
+  }
+}

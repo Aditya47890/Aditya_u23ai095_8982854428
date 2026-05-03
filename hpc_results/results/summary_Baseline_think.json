@@ -1,0 +1,24 @@
+{
+  "model": "Baseline",
+  "mode": "Think",
+  "n_dialogues": 18,
+  "score_mean": 23.72222222222222,
+  "score_ci": [
+    19.187520180900744,
+    28.2569242635437
+  ],
+  "score_std": 9.118859291119795,
+  "reward_mean": 0.37892592592592594,
+  "reward_ci": [
+    0.34126682847200235,
+    0.41658502337984954
+  ],
+  "success_rate": 0.0,
+  "failure_rate": 83.33333333333334,
+  "neutral_rate": 16.666666666666664,
+  "diagnostics": {
+    "avg_response_length": 43.79629629629629,
+    "length_normalized_reward": 0.0686831456574568,
+    "generic_template_rate": 0.2222222222222222
+  }
+}
